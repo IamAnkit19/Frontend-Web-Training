@@ -1,0 +1,139 @@
+<!-- Day: 2 -->
+<!-- Date: 19/08/2025 -->
+<!-- Day: Tuesday -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: aqua;
+        }
+        #road{
+            width: 100%;
+            height: 150px;
+            position: absolute;
+            background-color: rgb(68, 66, 66);
+            bottom: 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 50px;
+        }
+        .line{
+            width: 120px;
+            height: 15px;
+            background-color: white;
+            bottom: 60px;
+            animation-name: moveline;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes moveline{
+            0%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(-200%);
+            }
+        }
+        #car{
+            width: 170px;
+            height: 100px;
+            background: linear-gradient(red, yellow);
+            border-radius: 20px;
+            position: absolute;
+            bottom: 30px;
+            left: 70px;
+            display: flex;
+            justify-content: space-around;
+            align-items: end;
+        }
+        .wheel{
+            width: 50px;
+            background: linear-gradient(rgb(137, 9, 235), white);
+            height: 50px;
+            border-radius: 50px;
+            position: absolute;
+            bottom: -18px;
+            animation-name: rotatingWheel;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes rotatingWheel{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .left{
+            left: 20px;
+        }
+        .right{
+            right: 20px;
+        }
+        .glass{
+            width: 120px;
+            height: 40px;
+            border-radius: 20px;
+            position: absolute;
+            top: 15px;
+            background-color: rgb(201, 196, 196);
+        }
+        .person{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 7px;
+            border-radius: 30px;
+            top: 5px;
+        }
+        .eye{
+            width: 5px;
+            height: 5px;
+            position: absolute;
+            background-color: black;
+            border-radius: 100%;
+            top: 7px;
+        }
+        .mouth{
+            width: 10px;
+            height: 5px;
+            position: absolute;
+            background-color: black;
+            border-radius: 100%;
+            top: 20px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="road">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <div id="car">
+        <div class="glass">
+            <div class="person">
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+                <div class="mouth"></div>
+            </div>
+        </div>
+        <div class="wheel left"></div>
+        <div class="wheel right"></div>
+    </div>
+</body>
+</html>
