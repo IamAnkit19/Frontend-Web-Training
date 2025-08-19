@@ -1,0 +1,124 @@
+<!-- Day: 2 -->
+<!-- Date: 19/08/2025 -->
+<!-- Day: Tuesday -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            height: 30px;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            padding: 0px 10px;
+        }
+        h2{
+            color: rgb(226, 105, 12);
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        button{
+            width: 60px;
+            height: 80%;
+            border-radius: 20px;
+            background-color: rgb(226, 105, 12);
+            color: white;
+        }
+        main{
+            height: 100vh;
+            width: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 500px 250px;
+            gap: 7px;
+        }
+        .image{
+            width: 100%;
+            height: 100%;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        #one{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        #two{
+            grid-column-start: 4;
+            grid-column-end: 7;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        #three{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        #four{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        #five{
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        #six{
+            grid-column-start: 5;
+            grid-column-end: 7;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Coding Thinkers</h2>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Support</li>
+            <li>Contact</li>
+        </ul>
+        <button>Login</button>
+    </header>
+    <main>
+        <div class="image" id="one">
+            <img src="1.avif" alt="">
+        </div>
+        <div class="image" id="two">
+            <img src="2.avif" alt="">
+        </div>
+        <div class="image" id="three">
+            <img src="3.avif" alt="">
+        </div>
+        <div class="image" id="four">
+            <img src="4.avif" alt="">
+        </div>
+        <div class="image" id="five">
+            <img src="5.avif" alt="">
+        </div>
+        <div class="image" id="six">
+            <img src="6.avif" alt="">
+        </div>
+    </main>
+</body>
+</html>
