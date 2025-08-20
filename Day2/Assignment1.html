@@ -40,16 +40,29 @@
             width: auto;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 500px 250px;
+            grid-template-rows: 500px 250px 250px;
             gap: 7px;
         }
         .image{
             width: 100%;
             height: 100%;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         img{
             width: 100%;
             height: 100%;
+            transition: 3s;
+        }
+        img:hover{
+            transform: scale(1.5);
+        }
+        .image:hover .statement{
+            display: inline;
+            background-color: rgb(246, 246, 188);
         }
         #one{
             grid-column-start: 1;
@@ -87,6 +100,29 @@
             grid-row-start: 3;
             grid-row-end: 4;
         }
+        .statement{
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            text-align: center;
+            color: red;
+            z-index: 2;
+        }
+        @media screen and (max-width: 560px){
+            header{
+                flex-direction: column;
+                height: auto;
+                justify-content: center;
+                align-items: center;
+            }
+            ul{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -102,21 +138,27 @@
     </header>
     <main>
         <div class="image" id="one">
+            <h3 class="statement">Hello</h3>
             <img src="1.avif" alt="">
         </div>
         <div class="image" id="two">
+            <h3 class="statement">Hii</h3>
             <img src="2.avif" alt="">
         </div>
         <div class="image" id="three">
+            <h3 class="statement">Why Are You Here</h3>
             <img src="3.avif" alt="">
         </div>
         <div class="image" id="four">
+            <h3 class="statement">Go To Your Home</h3>
             <img src="4.avif" alt="">
         </div>
         <div class="image" id="five">
+            <h3 class="statement">Good Bye</h3>
             <img src="5.avif" alt="">
         </div>
         <div class="image" id="six">
+            <h3 class="statement">Simon Go Back!</h3>
             <img src="6.avif" alt="">
         </div>
     </main>
