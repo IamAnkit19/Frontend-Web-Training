@@ -1,0 +1,86 @@
+<!-- Day: 4 -->
+<!-- Date: 21/08/2025 -->
+<!-- Day: Thursday -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100vw;
+            background-color:rgb(75, 152, 225);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .box{
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .one{
+            background: linear-gradient(purple, cyan);
+        }
+        .two{
+            background: linear-gradient(to right, green, gold);
+        }
+        .three{
+            background: linear-gradient(60deg, magenta, brown);
+        }
+        .four{
+            background: repeating-linear-gradient(-45deg, blue 20%, red 40%);
+        }
+        .five{
+            background: repeating-linear-gradient(-60deg, pink 0px, pink 10px, skyblue 10px, skyblue 20px);
+        }
+        .six{
+            background: repeating-linear-gradient(45deg, red, yellow, green, blue);
+        }
+        .seven{
+            background: radial-gradient(red, blue);
+        }
+        .eight{
+            background: radial-gradient(ellipse at center, red, yellow, black);
+        }
+        .nine{
+            background: radial-gradient(circle at top left, rgb(225, 209, 209), rgb(20, 234, 20), rgb(244, 22, 22));
+        }
+        .ten{
+            background: repeating-radial-gradient(circle, orange 0px, orange 10px, yellow 10px, yellow 20px);
+        }
+        .eleven{
+            background: conic-gradient(red, blue, yellow, green, pink);
+        }
+        .twelve{
+            background: conic-gradient(from 90deg, pink, yellow, red, green);
+        }
+        .thirteen{
+            background: repeating-conic-gradient(red 0deg 20deg, yellow 20deg 40deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box one"></div>
+        <div class="box two"></div>
+        <div class="box three"></div>
+        <div class="box four"></div>
+        <div class="box five"></div>
+        <div class="box six"></div>
+        <div class="box seven"></div>
+        <div class="box eight"></div>
+        <div class="box nine"></div>
+        <div class="box ten"></div>
+        <div class="box eleven"></div>
+        <div class="box twelve"></div>
+        <div class="box thirteen"></div>
+    </div>
+</body>
+</html>
