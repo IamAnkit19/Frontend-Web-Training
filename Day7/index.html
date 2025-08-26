@@ -1,0 +1,114 @@
+<!-- Day: 7 -->
+<!-- Date: 26/08/2025 -->
+<!-- Day: Tuesday -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7</title>
+</head>
+<body>
+    <script>
+        console.log("5" + 5);
+        console.log("5" - 5);
+
+        // Array...
+        let arr = [];
+        let arr1 = [];
+        console.log(arr == arr1);
+
+        let a = [1, 2, true, "Ankit"];
+        console.log(a);
+        console.log(a[1]);
+        console.log(a[a.length-1]);
+
+        // Object: Stores data in key value pair...
+        let obj = {name: "Ankit", rollNo: "41"};
+        console.log(obj);
+        console.log(obj.name);
+
+        // Function
+        function func(){
+            console.log("Function called");
+        }
+        func();
+
+        // Sum function
+        sum(5, 10); // We can call function before declaring it..
+        function sum(a=10, b){ // Here a = 10 is default value in parameter...
+            console.log(a + b);
+        }
+
+        // Arrow Function...
+        let fun1 = () => {
+            console.log("Arrow Function");
+        }
+        fun1();
+
+        let arr2 = [1, 5, 9, 2, 3, 4, 6];
+        // Normal for loop...
+        for(let i = 0; i < arr2.length; i++){
+            console.log(arr2[i]);
+        }
+
+        // For of loop...
+        for(let i of arr2){
+            console.log(i); //Prints value...
+        }
+
+        // For in loop...
+        for(let i in arr2){
+            console.log(i); //Prints index...
+        }
+
+        // For each loop...
+        arr2.forEach(function(a, b, c){
+            console.log(a); //Prints value...
+            console.log(b); //Prints index...
+            console.log(c); //Prints array...
+        })
+
+        // forEach does not returns anything...
+        let data = arr2.forEach(function(a, b, c){
+            return a;
+        })
+        console.log(data);
+
+        // Map by default creates an array and return it...
+        let data1 = arr2.map(function(a, b, c){
+            return a;
+        })
+        console.log(data1);
+
+        // Filter: It returns array...
+        let data2 = arr2.filter(function(a, b, c){
+            return a % 2 == 0;
+        })
+        console.log(data2);
+
+        // Print values larger than 2 and are even...
+        let data3 = arr2.filter(function(a, b, c){
+            return a > 2 && a % 2 == 0;
+        })
+        console.log(data3);
+
+        // calculate sum of numbers greater than 2 and even...
+        let data4 = arr2.filter(function(a, b, c){
+            return a > 2 && a % 2 == 0;
+        })
+        let ans = 0;
+        for(let i of data4){
+            ans += i;
+        }
+        console.log(ans);
+
+        // Find: it returns a single element...
+        let data5 = arr2.find((a, b, c) => {
+            return a == 5;
+        })
+        console.log(data5);
+    </script>
+</body>
+</html>
