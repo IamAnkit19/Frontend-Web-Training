@@ -47,6 +47,7 @@
 // }
 // console.log(obj.toString());
 
+// Pollyfills: If we make a function which is already inbuilt with same functionality with different name.
 // Custom map function named as ankit.
 let arr = [1,2,3];
 Array.prototype.ankit = function(callback){ //Here we create a function. We can also take an arrow function.
@@ -76,16 +77,3 @@ let data1 = arr.myFilter((a, b, c) => {
     return a > 1;
 });
 console.log(data1);
-
-// Custom find function named as myFind.
-let arr2 = [1,2,3];
-Array.prototype.myFind = (value)=>{
-    for(let i=0; i<this.length; i++){
-        if(this[i] == value){
-            return i;
-        }
-    }
-    return -1;
-}
-
-console.log(arr2.myFind(3));
