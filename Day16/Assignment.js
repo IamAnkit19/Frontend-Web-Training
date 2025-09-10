@@ -13,10 +13,7 @@ form.addEventListener("submit", (e)=>{
     localStorage.setItem("formData", JSON.stringify(data));
 })
 
-// Not working...
-let btn = document.querySelector('button');
+let btn = document.getElementById('delete-btn');
 btn.addEventListener("click", (e)=>{
-   
     localStorage.removeItem("formData");
-   
 })
