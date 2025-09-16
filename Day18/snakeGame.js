@@ -12,6 +12,10 @@ function draw(){
     }
 }
 draw();
+
+function update(){
+
+}
 // let i = 0, j = 0;
 // document.addEventListener("keypress", (e)=>{
 //     if(e.key == "ArrowUp"){
@@ -36,6 +40,3 @@ draw();
 //     }
     
 // })
-function update(){
-
-}
