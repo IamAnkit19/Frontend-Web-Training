@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            background: #113691;
+background: linear-gradient(90deg,rgba(17, 54, 145, 1) 1%, rgba(0, 212, 255, 1) 100%);
+        }
+        .board{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            background-color: white;
+        }
+        .box{
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h3{
+            color: white;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            border-radius: 20px;
+        }
+        h1{
+            color: white;
+        }
+        .gameMenu{
+            height: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="gameMenu">
+        <h1>Tic-Tac-Toe</h1>
+    </div>
+    <div class="board">
+        <div id="b0" class="box"></div>
+        <div id="b1" class="box"></div>
+        <div id="b2" class="box"></div>
+        <div id="b3" class="box"></div>
+        <div id="b4" class="box"></div>
+        <div id="b5" class="box"></div>
+        <div id="b6" class="box"></div>
+        <div id="b7" class="box"></div>
+        <div id="b8" class="box"></div>
+    </div>
+    <button id="reset">Reset</button>
+</body>
+<script src="tictactoe.js"></script>
+</html>
