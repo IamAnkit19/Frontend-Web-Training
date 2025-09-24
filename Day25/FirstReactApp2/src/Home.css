@@ -1,0 +1,15 @@
+#one{
+    background-color: aqua;
+    /* width: 500px; */
+}
+
+#two{
+    background-color: salmon;
+    /* width: 500px; */
+}
+
+section{
+    display: grid;
+    grid-template-columns: 100px 500px;
+    justify-content: center;
+}
