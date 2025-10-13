@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 import './Home.css'
 
-const Home = ({apiData, setApiData, filterData, setFilterData, cart, setCart}) => {
+const Home = ({apiData, setApiData, filterData, setFilterData, cart, setCart, itemsInCart, setItemsInCart}) => {
     // let [apiData, setApiData] = useState([])
     // let [filterData, setFilterData] = useState([])
     useEffect(()=>{
@@ -66,26 +66,27 @@ const Home = ({apiData, setApiData, filterData, setFilterData, cart, setCart}) =
         })
         setFilterData(data);
     }
-    function addToCart(id){
-        filterData.find((a,b)=>{
-            if(id == b){
-                // if(!a.quantity){
-                //     a[quantity] = 1;
-                // }
-                // else{
-                //     a.quantity++;
-                // }
-                // a.quantity == 1 ? a.quantity = 1 : a.quantity++;
-                setCart([...cart,a]);
+    function addToCart(a){
+        let x = cart.find((y)=>{
+            if(y.userId == a.userId){
+                y.quantity++;
+                return true;
             }
+            return false;
         })
+        if(!x){
+            let z = a;
+            z['quantity'] = 1;
+            setCart([...cart,z])
+        }
+        setItemsInCart(itemsInCart+1);
     }
   return (
     <>
     <div className="nav">
         {/* Also filter based on ratings */}
         <Link to={'/cart'}>
-            <button>Show Cart {cart.length}</button>
+            <button>Show Cart {itemsInCart}</button>
         </Link>
         <button onClick={asc}>ASC</button>
         <button onClick={dec}>DEC</button>
@@ -105,7 +106,7 @@ const Home = ({apiData, setApiData, filterData, setFilterData, cart, setCart}) =
                     <div className="btns">
                         <button onClick={()=>del(b)}>Delete</button>
                         <button onClick={()=>save(b)}>Save</button>
-                        <button onClick={()=>{addToCart(b)}}>Add To Cart</button>
+                        <button onClick={()=>{addToCart(a)}}>Add To Cart</button>
                     </div>
                 </div>
                 </>

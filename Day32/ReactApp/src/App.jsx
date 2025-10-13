@@ -8,6 +8,7 @@ const App = () => {
   let [apiData, setApiData] = useState([])
   let [filterData, setFilterData] = useState([])
   let [cart, setCart] = useState([])
+  let [itemsInCart, setItemsInCart] = useState(0);
   let user = 'Ankit';
   let obj = {
     cnt:0,
@@ -37,8 +38,8 @@ const App = () => {
     <button onClick={()=>dispatch({type:'reset'})}>Reset</button> */}
     {/* <Home data={user}></Home> */}
     <Routes>
-      <Route path='/' element={<Home apiData={apiData} setApiData={setApiData} filterData={filterData} setFilterData={setFilterData} cart={cart} setCart={setCart}></Home>}/>
-      <Route path='/cart' element={<Cart cart={cart} setCart={setCart}></Cart>}/>
+      <Route path='/' element={<Home apiData={apiData} setApiData={setApiData} filterData={filterData} setFilterData={setFilterData} cart={cart} setCart={setCart} itemsInCart={itemsInCart} setItemsInCart={setItemsInCart}></Home>}/>
+      <Route path='/cart' element={<Cart cart={cart} setCart={setCart} itemsInCart={itemsInCart} setItemsInCart={setItemsInCart}></Cart>}/>
     </Routes>
     </>
   )
