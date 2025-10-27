@@ -13,9 +13,12 @@ const App = () => {
       }))
     }
   },[])
+  useEffect(() => {
+    localStorage.setItem("listData", JSON.stringify(work));
+  }, [work]);
   function fun1(){
     SetWork([...work, inputData]);
-    localStorage.setItem("listData", JSON.stringify(work));
+    // localStorage.setItem("listData", JSON.stringify(work));
     setInputData("");
   }
   function fun2(e){
@@ -25,7 +28,7 @@ const App = () => {
     SetWork(work.filter((a,b)=>{
       return idx != b;
     }))
-    localStorage.setItem("listData", JSON.stringify(work));
+    // localStorage.setItem("listData", JSON.stringify(work));
     setInputData("");            
   }
   return (
