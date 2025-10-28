@@ -26,9 +26,7 @@ const App = () => {
         setTimer(prev=>prev+1);
       },1000)
     }
-    else{
-      clearInterval(x);
-    }
+    return () => clearInterval(x);
   },[play])
   function fun2(){
     // let date = Date();
@@ -47,7 +45,7 @@ const App = () => {
     <div style={{backgroundColor:background}}>
         {/* <h1>{count}</h1>
         <button onClick={fun1}>++</button> */}
-        <h2>{timer}</h2>
+        <h2>{Math.floor(timer/60)}:{timer%60}</h2>
         <button onClick={()=>fun2()}>Start/Pause</button>
         <button onClick={()=>fun3()}>Reset</button>
     </div>
